@@ -34,33 +34,33 @@ const Home = () => {
 			{loading ? (
 				<Spinner />
 			) : (
-				<table className="w-full border-separate border-spacing-2">
+				<table className="w-full text-sm text-center border-separate border-spacing-4">
 					<thead>
 						<tr>
-							<th className="border rounded-md border-slate-600">No</th>
-							<th className="border rounded-md border-slate-600">Title</th>
-							<th className="border rounded-md border-slate-600 max-md:hidden">Author</th>
-							<th className="border rounded-md border-slate-600 max-md:hidden">Publish Year</th>
-							<th className="border rounded-md border-slate-600">Operations</th>
+							<th className="">No</th>
+							<th className="">Title</th>
+							<th className="max-md:hidden">Author</th>
+							<th className="max-md:hidden">Publish Year</th>
+							<th className="">Operations</th>
 						</tr>
 					</thead>
 					<tbody>
 						{books.map((item, index) => (
-							<tr key={item._id} className="h-8">
-								<td className="text-center border rounded-md border-slate-700">{index + 1}</td>
-								<td className="text-center border rounded-md border-slate-700">{item.title}</td>
-								<td className="text-center border rounded-md border-slate-700 max-md:hidden">{item.author}</td>
-								<td className="text-center border rounded-md border-slate-700 max-md:hidden">{item.publishYear}</td>
-								<td className="text-center border rounded-md border-slate-700">
-									<div className="flex justify-center gap-x-4">
+							<tr key={item._id} className="h-8 bg-white">
+								<td className="rounded-md shadow-lg">{index + 1}</td>
+								<td className="rounded-md shadow-lg">{item.title}</td>
+								<td className="rounded-md shadow-lg max-md:hidden">{item.author}</td>
+								<td className="rounded-md shadow-lg max-md:hidden">{item.publishYear}</td>
+								<td className="rounded-md shadow-lg">
+									<div className="flex items-center justify-center gap-x-4">
 										<Link to={`/books/detail/${item._id}`}>
-											<BsInfoCircle className="text-2xl text-green-600" />
+											<BsInfoCircle className="text-[#6ba91dff] md:text-2xl" />
 										</Link>
 										<Link to={`/books/edit/${item._id}`}>
-											<AiOutlineEdit className="text-2xl text-yellow-600" />
+											<AiOutlineEdit className="text-yellow-600 md:text-2xl" />
 										</Link>
 										<Link to={`/books/delete/${item._id}`}>
-											<MdOutlineDelete className="text-2xl text-red-600" />
+											<MdOutlineDelete className="text-red-600 md:text-2xl" />
 										</Link>
 									</div>
 								</td>

@@ -28,9 +28,9 @@ const DeleteBook = () => {
 	return (
 		<div className="p-4">
 			<BackButton />
-			<h1 className="my-4 text-3xl">Delete Book</h1>
+			<h1 className="my-4 text-3xl font-bold">Delete Book</h1>
 			{loading ? <Spinner /> : ""}
-			<div className="flex flex-col p-4 mx-auto rounded-xl border-2 border-sky-400 w-[600px]">
+			<div className="flex flex-col p-4 mx-auto rounded-xl border-2 border-sky-400 md:w-[600px]">
 				<h3>Are you sure delete this book?</h3>
 				<button className="p-2 m-8 text-white bg-red-600 rounded-md" onClick={handleDelete}>
 					Delete

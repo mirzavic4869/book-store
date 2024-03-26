@@ -8,8 +8,8 @@ const BackButton = ({ destination = "/" }) => {
 	};
 	return (
 		<div className="flex">
-			<Link to={destination} className="px-4 py-1 text-white rounded-md bg-sky-800 w-fit">
-				<BsArrowLeft className="text-2xl" />
+			<Link to={destination} className="px-4 py-1 text-white rounded-md bg-teal-800 w-fit">
+				<BsArrowLeft className="text-xl" />
 			</Link>
 		</div>
 	);
